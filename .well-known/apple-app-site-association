@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["M6FW7DS2PS.com.scottgordon.DropQuest"],
+        "components": [
+          { "/": "/q/*" }
+        ]
+      }
+    ]
+  }
+}
