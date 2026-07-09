@@ -3,10 +3,11 @@
     "details": [
       {
         "appIDs": ["M6FW7DS2PS.com.scottgordon.DropQuest"],
-        "components": [
-          { "/": "/q/*" }
-        ]
+        "components": [{ "/": "/q/*" }]
       }
     ]
+  },
+  "appclips": {
+    "apps": ["M6FW7DS2PS.com.scottgordon.DropQuest.Clip"]
   }
 }
