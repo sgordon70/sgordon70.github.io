@@ -6,8 +6,5 @@
         "components": [{ "/": "/q/*" }]
       }
     ]
-  },
-  "appclips": {
-    "apps": ["M6FW7DS2PS.com.scottgordon.DropQuest.Clip"]
   }
 }
