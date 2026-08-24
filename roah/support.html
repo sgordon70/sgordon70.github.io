@@ -1,0 +1,271 @@
+<title>Roah Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #faf6ec;
+    --ink: #23262b;
+    --ink-soft: #5b5f6a;
+    --indigo: #1e2a45;
+    --amber: #f0a63a;
+    --amber-ink: #8a5711;
+    --success: #4c8c6b;
+    --alert: #c1543a;
+    --line: #e4ddcc;
+    --card-bg: #ffffff;
+
+    --font-display: "Source Serif 4", Georgia, "Iowan Old Style", serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1c1e22;
+      --ink: #f5f1e8;
+      --ink-soft: #b8b3a6;
+      --indigo: #3a4c74;
+      --amber: #f0a63a;
+      --amber-ink: #f4bd66;
+      --success: #6fae8b;
+      --alert: #e2735a;
+      --line: #34363c;
+      --card-bg: #24262b;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #1c1e22;
+    --ink: #f5f1e8;
+    --ink-soft: #b8b3a6;
+    --indigo: #3a4c74;
+    --amber: #f0a63a;
+    --amber-ink: #f4bd66;
+    --success: #6fae8b;
+    --alert: #e2735a;
+    --line: #34363c;
+    --card-bg: #24262b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--amber-ink); text-decoration-color: color-mix(in srgb, var(--amber-ink) 45%, transparent); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--amber-ink); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 44px;
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber-ink);
+  }
+
+  .tagline {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 5vw, 2.9rem);
+    line-height: 1.08;
+    margin: 18px 0 0;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+
+  .dek {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 40px 0 56px;
+  }
+
+  .contact-card .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+
+  .contact-card .email {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .contact-card a.button {
+    display: inline-block;
+    background: var(--amber);
+    color: #23180a;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+  }
+
+  .contact-card a.button:hover { background: var(--amber-ink); color: #fff; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 56px 0 20px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+
+  .faq-item:first-of-type { border-top: 1px solid var(--line); }
+
+  .faq-item h3 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+
+  .faq-item p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .faq-item p + p { margin-top: 10px; }
+
+  .faq-item a { color: var(--amber-ink); }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  footer p { margin: 0 0 8px; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <span class="wordmark">Roah</span><br>
+      <span class="tagline">to see, to look, to perceive — ra'ah (רָאָה)</span>
+    </div>
+    <h1>Support</h1>
+    <p class="dek">Answers to common questions, and a real person to write to if you need more.</p>
+  </header>
+
+  <div class="contact-card">
+    <div>
+      <p class="label">Email us directly</p>
+      <p class="email">hello@blackhookgroup.com</p>
+    </div>
+    <a class="button" href="mailto:hello@blackhookgroup.com">Contact Support</a>
+  </div>
+
+  <h2>Getting started</h2>
+
+  <div class="faq-item">
+    <h3>How does Roah actually work?</h3>
+    <p>Point your camera at a page — a book, a worksheet, a Bible reading — and Roah reads the text on-device and highlights the words most likely to trip you up before you get there. Tap any word, highlighted or not, to hear it read aloud. You can also pick a photo from your library instead of using the camera live.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do I need an account?</h3>
+    <p>No. Camera scanning, on-device text recognition, and word highlighting work fully offline with no account. Signing in (automatic, no password) only adds syncing your progress across devices and confirming a Roah+ subscription.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>My scan looks garbled or words aren't being recognized well</h3>
+    <p>Frame the whole page evenly, hold steady, and make sure there's enough light — Roah's text recognition runs on the same image quality your camera captures, so glare, motion blur, or a tilted angle affects accuracy the same way it would for you reading the photo yourself. Flat pages under even lighting work best.</p>
+  </div>
+
+  <h2>Roah+ &amp; billing</h2>
+
+  <div class="faq-item">
+    <h3>What does Roah+ include?</h3>
+    <p>Roah+ unlocks the full Bible Reading Pack (curated pronunciation for scripture's names and places) and personalized difficulty tracking, which learns your specific struggle categories over time. Core reading, scanning, and pronunciation work for everyone without a subscription.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I cancel or manage my subscription?</h3>
+    <p>Open the Roah+ tab in the app and tap Manage Subscription, or go to Settings &gt; [your name] &gt; Subscriptions on your iPhone. Cancelling stops future renewals but doesn't refund the current period. If you bought Roah+ Lifetime, there's nothing to cancel — it's a one-time purchase with no renewal.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What's the difference between a subscription and Lifetime?</h3>
+    <p>Monthly and yearly plans renew automatically until you cancel. Roah+ Lifetime is a single one-time payment that unlocks everything for good, with no renewal. Lifetime doesn't cover future AI features that carry a real per-use cost to run — those will either need their own purchase or let you supply your own AI key, the same as the optional AI explanations feature already does.</p>
+  </div>
+
+  <h2>AI explanations</h2>
+
+  <div class="faq-item">
+    <h3>What is the "AI Explanations" setting?</h3>
+    <p>An optional feature in the Roah+ tab. Paste your own Anthropic API key and tapping a word can show a plain-language explanation, not just pronunciation. It runs on your own key directly against Anthropic's API — Roah never sees your key or your questions, and it's free to use regardless of your subscription status.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do I need an Anthropic API key to use Roah?</h3>
+    <p>No — this is entirely optional. Every other feature in Roah, including Roah+, works with no API key at all.</p>
+  </div>
+
+  <h2>Privacy</h2>
+
+  <div class="faq-item">
+    <h3>Is what I scan private?</h3>
+    <p>Yes. Every photo and every word Roah recognizes is processed on your device using Apple's Vision framework — the image and page text are never uploaded anywhere. Full details are in our <a href="https://getdropquest.app/roah/privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <footer>
+    <p>© 2026 Blackhook Group LLC.</p>
+    <p>Still stuck? Email <a href="mailto:hello@blackhookgroup.com">hello@blackhookgroup.com</a> and we'll get back to you.</p>
+  </footer>
+
+</div>
