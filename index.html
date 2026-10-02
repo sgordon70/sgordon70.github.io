@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>DropQuest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Make a friend a real-world scavenger hunt. Snap photo clues, send a link, and watch them follow the warmth.">
     <style>
-        body {
-            font-family: -apple-system, sans-serif;
-            text-align: center;
-            padding: 60px 20px;
-            background: #111;
-            color: #eee;
-        }
-        h1 { font-size: 28px; margin-bottom: 8px; }
-        p { color: #ccc; max-width: 420px; margin: 14px auto; line-height: 1.5; }
-        .note {
-            margin-top: 32px;
-            font-size: 13px;
-            color: #888;
-        }
+        :root { --paper:#FFF7EA; --deep:#FCE9CF; --ink:#2A1A12; --soft:#6E5446; --brand:#D23A1E; --card:#fff; --border:#F2E1C7; }
+        @media (prefers-color-scheme: dark) { :root { --paper:#1B1512; --deep:#120D0B; --ink:#F7ECDD; --soft:#C7B3A2; --card:#2A211C; --border:#3A2E27; } }
+        * { box-sizing: border-box; }
+        body { margin:0; min-height:100vh; font-family: ui-rounded, "SF Pro Rounded", -apple-system, "Nunito", system-ui, sans-serif;
+               background: linear-gradient(var(--paper), var(--deep)); color: var(--ink); text-align:center; padding: 56px 16px; }
+        img.icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        h1 { font-size: 30px; font-weight: 900; margin: 18px 0 8px; }
+        p { color: var(--soft); max-width: 380px; margin: 10px auto; line-height: 1.5; font-size: 17px; }
+        .buttons { display:flex; flex-direction:column; gap:12px; max-width: 320px; margin: 28px auto 0; }
+        a.btn { display:block; padding: 16px 20px; border-radius: 18px; font-weight: 800; font-size: 17px; text-decoration:none; }
+        a.primary { background: var(--brand); color:#fff; }
+        a.secondary, span.secondary { background: var(--card); color: var(--ink); border: 1px solid var(--border); padding: 16px 20px; border-radius: 18px; font-weight: 800; }
+        .note { font-size: 14px; margin-top: 28px; }
+        footer { margin-top: 48px; font-size: 13px; }
+        footer a { color: var(--soft); }
     </style>
 </head>
 <body>
-    <h1>🎯 Someone sent you a quest!</h1>
-    <p>A friend made you a real-world scavenger hunt with DropQuest. DropQuest isn't available on the App Store right now, so this quest link can't be opened.</p>
-    <p class="note">Already have DropQuest installed? Go back and tap the link again — it should open directly.</p>
+    <img class="icon" src="/icon.png" alt="DropQuest icon">
+    <h1>Little adventures for the people you love</h1>
+    <p>Walk to a few real spots, snap a photo clue at each one, and send the quest to a friend. They follow the warmth until they find every stop. Playing is always free.</p>
+    <div class="buttons">
+        <a class="btn primary" href="https://apps.apple.com/app/id6789737263">Get DropQuest for iPhone</a>
+        <span class="secondary">Android version coming soon</span>
+    </div>
+    <p class="note">Already have DropQuest? Go back and tap the quest link again. It opens right in the app.</p>
+    <footer><a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/support.html">Support</a></footer>
 </body>
 </html>
